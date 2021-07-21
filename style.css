@@ -1,0 +1,320 @@
+
+/********** MAIN ELEMENTS **********/
+
+/* Resetting margin and padding of all elements*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  /*This feature is nice but not all browsers can do it.*/
+  scroll-behavior: smooth;
+}
+
+
+/*a wrapper div was created in the html structure so we can "wrap" our content*/
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+  height: 90%;
+}
+
+section{
+  padding-bottom: 100px;
+}
+
+/*basic font properties. Later overwritten if they need to change*/
+h1, h2, h3, a, .header{
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+h1{
+  font-size: 40pt;
+  line-height: 50pt;
+  font-weight: 100;
+}
+
+h2{
+  font-size: 25pt;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+h3{
+  font-size: 20pt;
+  letter-spacing: 2pt;
+  font-weight: bold;
+}
+
+p{
+ font-family: sans-serif; 
+ font-size: 12pt;
+ font-weight: 400;
+ line-height: 25pt;
+ color: white;
+}
+
+/********** HEADER + Navigation **********/
+
+/* Styling the header*/
+header{
+  background-color:#E0FFFF;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  padding:10px;
+  z-index: 1;
+}
+
+nav{
+  display: inline-block;
+  height: 100%;
+  width: 70%;
+  line-height: 50px;
+  text-align: right;
+  vertical-align: middle;
+  float: right;
+}
+
+header img{
+  line-height: 40px;
+  float: left;
+  height: 60px;width: 60px;
+  vertical-align: middle
+}
+
+header ul{
+  list-style: none;position: relative;right:15%;
+}
+
+header ul li{
+  display: inline-block;
+  height: 100%;
+  width: 20%; padding-left: 4%;
+}
+
+a{
+  font-size: 12pt;
+  text-decoration: none;
+  color:#387EED;
+}
+a:hover{
+  text-decoration: underline;color:#7CFC00;
+}
+
+/********** Section 1 - HERO **********/
+.section1{
+  /*because we have uses float in the header we need to clear the float to both sides here in the next element*/
+  clear: both;
+  background-color: #387EED;
+  position: relative;
+  /*we can calculate numbers of different values with calc(value 1 *+-/ value 2*/
+  height: calc(100vh - 50px);
+  padding-top: 50px;font-family: sans-serif;
+}
+
+.section1 .wrapper{
+  /*We have the wrapper inside the section and the wrapper needs to be the parent
+  of the elements we want to position*/
+  position: relative;
+}
+
+.hero_img{
+  width: 70%;
+ 
+  position: absolute;
+  top: 5%;
+  left:47%;
+}
+
+.section1 h1{
+  position: absolute;
+  top: 20%;
+  left: 0%;
+}
+.section1 p{
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  left: 0%;
+
+}
+.section1 ul{
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  list-style: none;
+  width: 50%;
+}
+
+.section1 ul li{
+  display: inline-block;
+  padding: 20px;
+  text-align: center;border: 1px solid #fff;color:white;top:;
+}
+
+.section1 ul li:hover{
+  box-shadow: 0px 15px 15px rgb(30,30,30);
+}
+
+.section1 a{
+  letter-spacing: 1px;
+  color: white;
+}
+.section1 a:hover{
+  text-decoration: none;
+}
+
+.button1{
+  width: 30%;
+}
+
+.button2{
+  margin-left: 50px;
+  width: 30%;
+}
+
+.arrow_img{
+  width: 50px;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+/********** Section 2 - ABOUT **********/
+.section2{
+  min-height: 60vh;font-family: sans-serif;
+}
+
+.section2 h2{
+}
+
+.section2 p{
+  color: #767676;
+  margin-bottom: 20px;font-size: 30px;padding-right: 25%
+}
+.section2 img{z-index: -3;position: absolute;padding-left: 14%;}
+.me{position: absolute;padding-left:55%;padding-bottom: 20%}
+
+/********** Section 3 - WORKS **********/
+.section3{
+  background-color: #387EED; font-family:sans-serif;width: 100%
+}
+
+
+.section3 img{
+  width: 30%;
+}
+
+.section3 h2{color:white;
+
+}
+
+.section3 ul{
+  list-style: none;
+  height: auto;
+}
+
+.section3 li{
+  position: relative;
+  min-height: 600px;
+}
+
+.section3 li img{
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 40%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.change p{position: absolute;left:0%;color:white;top:15%;}
+.change li img{position: absolute;right:0;left:60%;}
+
+.section3 li p{
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 50%;
+  font-weight: 100;
+}
+/********** Section 4 - HONORS **********/
+.section4{
+  min-height: 90vh;
+  background-color: #E0FFFF ;font-family:sans-serif;
+}
+.section4 h2{color: #387EED}
+.section4 ul{
+  columns: 2;
+}
+
+.section4 li{
+  line-height: 20px;
+  
+  padding-right: 70px;list-style: none;position: absolute;
+}
+
+.section4 ul li img:hover{box-shadow: 0px 15px 15px #00108d; }
+.section4 li img{position:relative;padding-bottom: 0%
+ 
+  }
+
+ 
+
+  .img2 {position: absolute;padding-left: 40%;padding-top: 50%%}
+ 
+  
+.img3{position: absolute;padding-top: 22%;padding-left: 37%}
+
+
+
+.img4 {position:absolute;padding-top:22%;padding-right: 30% }
+
+.section4 li p{position: relative;padding-bottom:0%;color:#387EED;}
+
+
+
+
+
+/********** Section 5 - CONTACT **********/
+.section5{
+  min-height: 60vh;
+  position: relative;font-family: sans-serif;
+}
+.section5 h2{color:#387EED;}
+.section5 p{position: absolute;margin-left: 10%:color:black;}
+.a1{position:absolute;color:black; top:25%;left:53%;padding-bottom: 30%}
+.a2{position: relative;left: 10%;top:10%;}
+
+
+.section5 a{
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%);
+  font-size: 40pt;color:#FF8C00;
+}
+.section5 a:hover{color:#7CFC00;}
+.section5 img{z-index: -10;position:absolute;padding-left: 4%;padding-top: -10%}
+
+/********** FOOTER **********/
+footer{
+  background-color: #387EED;padding-bottom: 0
+}
+
+footer p{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: 100;
+  text-align: center;
+}
